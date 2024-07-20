@@ -1,0 +1,33 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloudshopping
+    username: root
+    password: shop1234
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 10
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 10
+  instance:
+    lease-renewal-interval-in-seconds: 5 # send a heartbeat every 5 seconds
+    lease-expiration-duration-in-seconds: 10 # expires if not sent for 10 seconds
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
+
+ly:
+  jwt:
+    secret: ly@Login(Auth}*^31)&hwjgu32% # login verification key
+    #    pubKeyPath: D:/BaiduNetdiskDownload/hwj/hwj/rsa.pub # old public key address
+    #    priKeyPath: D:/BaiduNetdiskDownload/hwj/hwj/rsa.pri # old private key address
+    expire: 30 # expiration time, in minutes
+    cookieName: LY_TOKEN
+    pub-key-path: ./rsa.pub
+    pri-key-path: ./rsa.pri

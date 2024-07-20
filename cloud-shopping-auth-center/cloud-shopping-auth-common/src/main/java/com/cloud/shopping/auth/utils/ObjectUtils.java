@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class ObjectUtils {
 
+    // This method is used to convert an object to a string
     public static String toString(Object obj) {
         if (obj == null) {
             return null;
@@ -11,6 +12,7 @@ public class ObjectUtils {
         return obj.toString();
     }
 
+    // This method is used to convert an object to a long
     public static Long toLong(Object obj) {
         if (obj == null) {
             return 0L;
