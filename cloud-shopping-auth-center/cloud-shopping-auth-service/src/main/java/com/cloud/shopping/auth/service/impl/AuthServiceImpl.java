@@ -14,9 +14,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.stereotype.Service;
 
 /**
- * @Author Hwj
- * @Date 2019/4/25 9:25
- * @Version 1.0.0
+ * This class is used to verify user login status
  **/
 @Slf4j
 @Service
@@ -26,11 +24,12 @@ public class AuthServiceImpl implements AuthService {
     private UserClient userClient;
 
     @Autowired
-    private  JwtProperties prop;
+    private JwtProperties prop;
+
     @Override
     public String login(String username, String password) {
-        try{
-            //校验用户名和密码
+        try {
+            // Verify username and password
             // User user = userClient.queryUserByUsernameAndPassword(username, password);
             User user = new User();
             user.setUsername(username);
@@ -38,28 +37,28 @@ public class AuthServiceImpl implements AuthService {
             long id = 31;
             user.setId(id);
             //判断
-            if(user == null){
-                throw  new LyException(ExceptionEnum.INVALID_USERNAME_PASSWORD);
+            if (user == null) {
+                throw new LyException(ExceptionEnum.INVALID_USERNAME_PASSWORD);
             }
-            //生成token
+            // Generate token
             String token = JwtUtils.generateToken(new UserInfo(user.getId(), username),
                     prop.getPrivateKey(), prop.getExpire());
             return token;
 
-        }catch(Exception e){
-            log.error("[授权中心] 用户名或密码有误，用户名称：{}",username,e);
+        } catch (Exception e) {
+            log.error("[AuthService] username or password is incorrect, username: {}", username, e);
             throw new LyException(ExceptionEnum.INVALID_USERNAME_PASSWORD);
         }
     }
 
     @Override
     public Boolean adminLogin(String username, String password) {
-        //判断是否为管理员
+        // Determine if the user is an administrator
         Boolean queryAdmin = userClient.queryAdmin(username, password);
-        if(queryAdmin){
+        if (queryAdmin) {
             return true;
         }
-        log.error("[授权中心] 该用户不是管理员，用户名称：{}",username);
+        log.error("[AuthService] the user is not admin, username: {}", username);
         return false;
     }
 }
