@@ -18,19 +18,19 @@ public class User {
     @KeySql(useGeneratedKeys = true)
     private Long id;
 
-    @NotEmpty(message = "用户名不能为空")
-    @Length(min=4,max=32,message = "用户名长度必须在4~32位")
-    private String username;// 用户名
+    @NotEmpty(message = "Username cannot be empty")
+    @Length(min=4,max=32,message = "Username length must be between 4 and 32")
+    private String username;
 
-    @Length(min=6,max=30,message = "密码长度必须在6~30位")
+    @Length(min=6,max=30,message = "Password length must be between 6 and 30")
     @JsonIgnore
-    private String password;// 密码
+    private String password;
 
     @Pattern(regexp = "^(13[0-9])|(14[579])|(15([0-3]|[5-9]))|(16[6])|(17[0135678])|(18[0-9])|(19[89])\\d{8}$",message = "手机号不正确")
-    private String phone;// 电话
+    private String phone;
 
-    private Date created;// 创建时间
+    private Date created;
 
     @JsonIgnore
-    private String salt;// 密码的盐值
+    private String salt;
 }

@@ -7,8 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.UUID;
 
 /**
- * @author: HuYi.Zhang
- * @create: 2018-04-30 15:56
+ * This class is used to encode passwords and generate salts.
  **/
 public class CodecUtils {
 

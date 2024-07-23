@@ -44,11 +44,11 @@
             <artifactId>cloud-shopping-user-interface</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.cloud.shopping.common</groupId>-->
-<!--            <artifactId>cloud-shopping-common</artifactId>-->
-<!--            <version>1.0.0-SNAPSHOT</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.cloud.shopping.common</groupId>
+            <artifactId>cloud-shopping-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
@@ -65,18 +65,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.cloud.shopping.service</groupId>-->
-<!--            <artifactId>cloud-shopping-user-interface</artifactId>-->
-<!--            <version>1.0.0-SNAPSHOT</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.cloud.shopping.service</groupId>-->
-<!--            <artifactId>cloud-shopping-user-interface</artifactId>-->
-<!--            <version>1.0.0-SNAPSHOT</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.cloud.shopping.service</groupId>
+            <artifactId>cloud-shopping-user-interface</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.cloud.shopping.service</groupId>
+            <artifactId>cloud-shopping-user-interface</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 

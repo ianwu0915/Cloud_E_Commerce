@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
- * @Author Hwj
- * @Date 2019/4/24 12:06
- * @Version 1.0.0
+ * This class is used to verify user login status
  **/
 @RestController
 public class UserController {
@@ -21,7 +19,7 @@ public class UserController {
     private UserService userService;
 
     /**
-     * 校验数据
+     * Check if the username and phone number are available
      * @param data
      * @param type
      * @return
@@ -33,7 +31,7 @@ public class UserController {
     }
 
     /**
-     * 发送短信验证码
+     * Send verification code
      * @param phone
      * @return
      */
@@ -44,7 +42,7 @@ public class UserController {
     }
 
     /**
-     * 注册
+     * Register user
      * @param user
      * @param code
      * @return
@@ -61,7 +59,7 @@ public class UserController {
     }
 
     /**
-     * 普通用户，根据用户名和密码查询用户
+     * Query user by username and password
      * @param username
      * @param password
      * @return
@@ -74,7 +72,7 @@ public class UserController {
     }
 
     /**
-     * 管理员，根据用户名和密码查询用户
+     * Determine if the user is an administrator, return true if it is
      * @param username
      * @param password
      * @return

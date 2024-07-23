@@ -3,6 +3,7 @@ package com.cloud.shopping.auth.web;
 import com.cloud.shopping.auth.service.AuthService;
 import com.cloud.shopping.auth.config.JwtProperties;
 import com.cloud.shopping.auth.entity.UserInfo;
+import com.cloud.shopping.auth.utils.JwtUtils;
 import com.cloud.shopping.common.enums.ExceptionEnum;
 import com.cloud.shopping.common.exception.LyException;
 import com.cloud.shopping.common.utils.CookieUtils;
@@ -62,6 +63,7 @@ public class AuthController {
 
     /**
      * Verify user login status
+     * It verifies the token and returns the user information
      * @param token
      * @return
      */
@@ -72,12 +74,12 @@ public class AuthController {
     ) {
         try {
             // Parse token (actual code for parsing should be uncommented in real use)
-            // UserInfo userInfo = JwtUtils.getInfoFromToken(token, prop.getPublicKey());
+             UserInfo userInfo = JwtUtils.getInfoFromToken(token, prop.getPublicKey());
             // Refresh token, generate a new one
-            // String newToken = JwtUtils.generateToken(userInfo, prop.getPrivateKey(), prop.getExpire());
+             String newToken = JwtUtils.generateToken(userInfo, prop.getPrivateKey(), prop.getExpire());
             // Write new token to cookie with httpOnly set to true
-            // CookieUtils.newBuilder(response).httpOnly().request(request)
-            //           .build(cookieName, newToken);
+             CookieUtils.newBuilder(response).httpOnly().request(request)
+                       .build(cookieName, newToken);
             // Logged in, return user information
             return ResponseEntity.ok(userInfo);
         } catch (Exception e) {
@@ -97,6 +99,7 @@ public class AuthController {
             @RequestParam("username") String username, @RequestParam("password") String password,
             HttpServletRequest request, HttpServletResponse response
     ) {
+        // predefined admin id user info
         long id = 31;
         userInfo.setId(id);
         userInfo.setUsername(username);
@@ -106,8 +109,9 @@ public class AuthController {
         String token = authService.login(username, password);
         log.info("Token: {}", token);
 
-        // Check if user is an admin (replace with actual check if available)
-        Boolean adminLogin = true; // Replace with authService.adminLogin(username, password);
+        // Check if user is an admin
+        Boolean adminLogin = true;
+//         authService.adminLogin(username, password);
         if (!adminLogin) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }

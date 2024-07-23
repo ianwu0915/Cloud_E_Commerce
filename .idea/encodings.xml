@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/cloud-shopping-auth-center/cloud-shopping-auth-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-auth-center/cloud-shopping-auth-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-auth-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-auth-center/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-registry/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-user/cloud-shopping-user-interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-user/cloud-shopping-user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-user/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

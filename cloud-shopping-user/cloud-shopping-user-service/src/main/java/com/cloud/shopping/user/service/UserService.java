@@ -4,7 +4,7 @@ import com.cloud.shopping.user.pojo.User;
 public interface UserService {
 
     /**
-     * 检查用户名和手机号是否可用
+     * Check if the data is available
      * @param data
      * @param type
      * @return
@@ -12,20 +12,20 @@ public interface UserService {
     Boolean checkData(String data, Integer type);
 
     /**
-     * 发送短信
+     * Send verification code
      * @param phone
      */
     void sendCode(String phone);
 
     /**
-     * 用户注册
+     * Register user
      * @param user
      * @param code
      */
     void register(User user, String code);
 
     /**
-     * 根据用户名和密码查询用户
+     * Query user by username and password
      * @param username
      * @param password
      * @return
@@ -33,7 +33,7 @@ public interface UserService {
     User queryUserByUsernameAndPassword(String username, String password);
 
     /**
-     * 判断是否为管理员，如果是返回true
+     * Check if the user is admin
      * @param username
      * @param password
      * @return
