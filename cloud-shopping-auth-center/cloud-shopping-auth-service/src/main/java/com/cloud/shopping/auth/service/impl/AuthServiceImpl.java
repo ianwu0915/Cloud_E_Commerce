@@ -26,14 +26,16 @@ public class AuthServiceImpl implements AuthService {
     @Autowired
     private JwtProperties prop;
 
+    // Login authorization
+    // Return token if successful, throw exception if failed
     @Override
     public String login(String username, String password) {
         try {
             // Verify username and password
-            // User user = userClient.queryUserByUsernameAndPassword(username, password);
-            User user = new User();
-            user.setUsername(username);
-            user.setPassword(password);
+            User user = userClient.queryUserByUsernameAndPassword(username, password);
+//            User user = new User();
+//            user.setUsername(username);
+//            user.setPassword(password);
             long id = 31;
             user.setId(id);
             //判断

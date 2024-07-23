@@ -139,7 +139,7 @@ public class UserServiceImpl implements UserService {
 
     /**
      * Checks if the user has administrator privileges.
-     * Currently implements a simple check based on user ID.
+     * Currently, only implements a simple check based on user ID.
      *
      * @param username The username to check
      * @param password The password to verify

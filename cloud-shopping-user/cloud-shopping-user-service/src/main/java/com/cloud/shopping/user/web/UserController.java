@@ -12,6 +12,9 @@ import javax.validation.Valid;
 
 /**
  * This class is used to verify user login status
+ * Flow: check if the username and phone number are available,
+ * send verification code, register user
+ *
  **/
 @RestController
 public class UserController {
