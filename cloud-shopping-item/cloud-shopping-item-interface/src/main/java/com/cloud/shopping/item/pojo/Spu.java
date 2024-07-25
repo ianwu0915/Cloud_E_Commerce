@@ -1,4 +1,4 @@
-package com.cloud.shopping.item.entity;
+package com.cloud.shopping.item.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.cloud.shopping.item.entity;
+package com.cloud.shopping.item.pojo;
 
 import lombok.Data;
 import tk.mybatis.mapper.annotation.KeySql;

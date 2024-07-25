@@ -6,6 +6,10 @@
     <file url="file://$PROJECT_DIR$/cloud-shopping-auth-center/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-shopping-auth-center/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-shopping-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-item/cloud-shopping-item-interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-item/cloud-shopping-item-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-item/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-shopping-item/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-shopping-registry/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-shopping-user/cloud-shopping-user-interface/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-shopping-user/cloud-shopping-user-service/src/main/java" charset="UTF-8" />

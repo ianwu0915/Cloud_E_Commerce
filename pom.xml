@@ -12,6 +12,8 @@
         <module>cloud-shopping-registry</module>
         <module>cloud-shopping-auth-center</module>
         <module>cloud-shopping-user</module>
+        <module>cloud-shopping-item</module>
+
 
 
     </modules>
