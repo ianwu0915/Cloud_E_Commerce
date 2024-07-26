@@ -13,6 +13,7 @@
         <module>cloud-shopping-auth-center</module>
         <module>cloud-shopping-user</module>
         <module>cloud-shopping-item</module>
+        <module>cloud-shopping-cartItem</module>
 
 
 
