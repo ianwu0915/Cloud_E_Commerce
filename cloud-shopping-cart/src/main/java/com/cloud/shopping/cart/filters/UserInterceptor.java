@@ -5,17 +5,19 @@ import com.cloud.shopping.auth.utils.JwtUtils;
 import com.cloud.shopping.cart.config.JwtProperties;
 import com.cloud.shopping.common.utils.CookieUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import org.springframework.web.servlet.HandlerAdapter;
+import org.springframework.web.servlet.HandlerInterceptor;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * User Authentication Interceptor
  * Validates JWT tokens and maintains user context
  */
 @Slf4j
-public class UserInterceptor extends HandlerInterceptorAdapter {
+public class UserInterceptor implements HandlerInterceptor {
 
     private JwtProperties prop;
 
