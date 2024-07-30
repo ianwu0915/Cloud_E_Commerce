@@ -5,10 +5,10 @@ import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import tk.mybatis.mapper.annotation.KeySql;
 
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
 import java.util.Date;
 
 @Data

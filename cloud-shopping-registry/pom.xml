@@ -38,5 +38,29 @@
 			<artifactId>javax.el</artifactId>
 			<version>2.2.6</version>
 		</dependency>
+		<!-- Spring Boot Test Dependency -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>2.7.8</version>  <!-- Match your Spring Boot version -->
+			<scope>test</scope>
+		</dependency>
+
+		<!-- JUnit 5 (JUnit Jupiter) -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.9.2</version>  <!-- Latest stable JUnit 5 version -->
+			<scope>test</scope>
+		</dependency>
+
+		<!-- JUnit Jupiter Engine (needed for running tests) -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.9.2</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
+
 </project>

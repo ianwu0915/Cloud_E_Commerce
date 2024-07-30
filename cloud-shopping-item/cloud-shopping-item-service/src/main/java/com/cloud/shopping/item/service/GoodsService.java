@@ -86,14 +86,14 @@ public class GoodsService {
     private void loadCaegroaryAndBrandName(List<Spu> spus) {
         for (Spu spu:spus){
             //处理分类名称
-            List<String> names = categoryService.queryByIds(Arrays.asList(spu.getCid1(), spu.getCid2(), spu.getCid3()))
+            List<String> names = categoryService.queryByIds(Arrays.asList(spu.getCategoryId1(), spu.getCategoryId2(), spu.getCategoryId3()))
                     .stream().map(Category::getName).collect(Collectors.toList());
-            spu.setCname(StringUtils.join(names,"/"));
+            spu.setCategoryName(StringUtils.join(names,"/"));
             //处理品牌名称
             System.out.println("该品牌id:"+spu.getBrandId());
             //这里判断品牌id是否为0，因为查到这种情况会抛出“品牌不存在”的异常，导致页面刷不出来，这里是自己添加的
 //            if(spu.getBrandId()!=0){
-                spu.setBname(brandService.queryById(spu.getBrandId()).getName());
+                spu.setBrandName(brandService.queryById(spu.getBrandId()).getName());
 //            }
         }
     }
@@ -113,7 +113,7 @@ public class GoodsService {
 
         int count = spuMapper.insert(spu);
         if(count!=1){
-            throw new LyException(ExceptionEnum.GOODS_SAVE_ERROE);
+            throw new LyException(ExceptionEnum.GOODS_SAVE_ERROR);
         }
         //新增detail
         SpuDetail detail = spu.getSpuDetail();
@@ -148,7 +148,7 @@ public class GoodsService {
 
             count = skuMapper.insert(sku);
             if(count!=1){
-                throw new LyException(ExceptionEnum.GOODS_SAVE_ERROE);
+                throw new LyException(ExceptionEnum.GOODS_SAVE_ERROR);
             }
 
             //新增库存
@@ -162,7 +162,7 @@ public class GoodsService {
         //批量新增库存
         count=stockMapper.insertList(stockList);
         if(count!=1){
-            throw new LyException(ExceptionEnum.GOODS_SAVE_ERROE);
+            throw new LyException(ExceptionEnum.GOODS_SAVE_ERROR);
         }
     }
     public SpuDetail queryDetailById(Long spuId) {
@@ -227,14 +227,14 @@ public class GoodsService {
         int count = spuMapper.updateByPrimaryKeySelective(spu);
         if(count!=1){
             System.out.println("//修改spu");
-            throw new LyException(ExceptionEnum.GOODS_UPDATE_ERROE);
+            throw new LyException(ExceptionEnum.GOODS_UPDATE_ERROR);
         }
 
         //修改detail
         count= detailMapper.updateByPrimaryKeySelective(spu.getSpuDetail());
         if(count!=1){
             System.out.println("//修改detail");
-            throw new LyException(ExceptionEnum.GOODS_UPDATE_ERROE);
+            throw new LyException(ExceptionEnum.GOODS_UPDATE_ERROR);
         }
         //新增sku和stock
         saveSkuAndStock(spu);

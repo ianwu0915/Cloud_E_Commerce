@@ -4,7 +4,7 @@ import com.cloud.shopping.auth.utils.RsaUtils;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 

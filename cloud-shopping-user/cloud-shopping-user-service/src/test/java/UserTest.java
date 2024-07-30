@@ -2,15 +2,17 @@ import com.cloud.shopping.UserApplication;
 import com.cloud.shopping.user.mapper.UserMapper;
 import com.cloud.shopping.user.pojo.User;
 import com.cloud.shopping.user.utils.CodecUtils;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.Date;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = UserApplication.class)
 public class UserTest {
 
