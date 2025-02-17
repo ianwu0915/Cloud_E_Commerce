@@ -51,7 +51,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.28</version>
+			<version>8.1.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.cloud.shopping.service</groupId>
