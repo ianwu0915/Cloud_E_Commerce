@@ -13,7 +13,7 @@
         <module>cloud-shopping-auth-center</module>
         <module>cloud-shopping-user</module>
         <module>cloud-shopping-item</module>
-        <module>cloud-shopping-cartItem</module>
+        <module>cloud-shopping-cart</module>
 
 
 
@@ -87,7 +87,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
+            <version>8.0.33</version>
         </dependency>
 
         <dependency>
